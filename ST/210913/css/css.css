@@ -1,0 +1,189 @@
+/* 초기화 코드 시작 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/* 초기화 코드 종료 */
+
+@font-face {
+    font-family: bi;
+    src: url(font/TitilliumWeb-BoldItalic.woff);
+}
+@font-face {
+    font-family: bi2;
+    src: url(font/TitilliumWeb-Bold.woff);
+}
+
+.wrap {
+    width : 100%;
+    height : 100vh;
+}
+
+section {
+    width : 100%;
+    height : 100vh;
+}
+
+.page1 {
+    background-color: slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2 {
+    background-color: springgreen;
+}
+
+.page3 {
+    background-color: tomato;
+}
+
+.menu {
+    position: fixed;
+    width : 100%;
+    height : 100vh;
+    background-color: silver;
+    z-index: 100;
+    top : 0;
+    left : 0;
+    display : none;
+}
+
+.menu .m_box {
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    background-color: purple;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .m_box.mmm_E {
+    width : calc(100% - 80px);
+    height : calc(100% - 80px);
+    transition: all 0.5s;
+}
+
+
+.menu .m_box .close {
+    position: absolute;
+    display: inline-block;
+    width : 30px;
+    height : 30px;
+    background-color: red;
+    top : 10px;
+    right : 10px;
+}
+
+.menu .m_box > ul {
+    position: absolute;
+    width : 100%;
+    height :50%;
+    top : 50%;
+    transform: translateY(-50%);
+    font-family: bi;
+}
+
+.menu .m_box > ul > li {
+    width : 100%;
+    height : 25%;
+    font-size: 4.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 5rem;
+}
+
+.menu .m_box > ul > li > p {
+    /* background-color: red; */
+    /* background: #000; */
+    /* -webkit-background-clip: text; */
+    padding-right : 10px;
+    box-sizing: border-box;
+}
+
+.menu .m_box > ul > li:hover > p {
+    background-color: red;
+    background: linear-gradient(to left, #ffde00 50%, #000 50%);
+    -webkit-text-fill-color: transparent;
+    /* color : transparent; */
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    transition: all 0.5s;
+}
+
+.page2 {
+    position: relative;
+    font-family: bi2;
+}
+
+.page2 > h1 {
+    font-size: 3rem;
+}
+
+.page2 ul {
+    position: absolute;
+    width : 80%;
+    height : 50%;
+    top  :50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.page2 ul > li {
+    width : calc(100%/ 4 );
+    height : 100%;
+    border : 1px solid black;
+    box-sizing: border-box;
+}
+
+.page2 ul > li > h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
