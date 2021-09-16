@@ -1,0 +1,254 @@
+/* 초기화 코드 시작 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/* 초기화 코드 종료 */
+
+@font-face {
+    font-family: bi;
+    src: url(../font/TitilliumWeb-Bold.woff);
+}
+
+@font-face {
+    font-family: na;
+    src: url(../font/NanumBarunGothic.woff);
+}
+
+@font-face {
+    font-family: bii;
+    src: url(../font/TitilliumWeb-BoldItalic.woff);
+}
+
+.wrap {
+    width : 100%;
+    /* height : 100%; */
+}
+
+section {
+    position: relative;
+    width : 100%;
+    height : 100vh;
+    z-index: 1;
+}
+
+/* p1 */
+.page1 {
+    background-color: palevioletred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page1 .p1_box {
+    width : 300px;
+    height : 6rem;
+    position: relative;
+}
+
+.page1 .p1_box .p1_p {
+    width : 0%;
+    height : 100%;
+    display : inline-block;
+    position: absolute;
+    font-family: bii;
+    font-size: 5rem;
+    line-height: 6rem;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.page1 .p1_box .p1_p.p1E {
+    width : 100%;
+}
+
+.page1 > input {
+    position: absolute;
+    font-family: bi;
+    font-size: 1.5rem;
+    top : 30%;
+}
+
+/* p1 x */
+
+
+/* p2 */
+.page2 {
+    background-color: slateblue;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2 > input {
+    margin-top : 30px;
+    cursor: pointer;
+    font-family: bi;
+    font-size: 1.1rem;
+    width : 500px;
+    border : 3px solid #33BB88;
+    background-color: #fff;
+}
+
+.page2 > input.add_ok {
+    cursor: pointer;
+}
+
+.page2 > input.add_no {
+    cursor: not-allowed;
+}
+
+.page2 .p2_pbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width : 500px;
+    height : 100px;
+}
+
+.page2 .p2_pbox > input {
+    border : 1px solid black;
+    box-sizing: border-box;
+    /* background-color: rgba(0, 0, 0, 0); */
+    background-color: #fff;
+    width : 80px;
+    height : 30px;
+    cursor: pointer;
+    font-family: bi;
+    font-size: 1.1rem;
+}
+
+.page2 .p2_pbox > input.f_hover {
+    background-color: red;
+}
+
+.page2 .p2_pbox > input.f_click {
+    background-color: blue;
+}
+
+/* p2 x */
+
+.page3 {
+    background-color: palevioletred;
+}
+
+/* p4 */
+.page4 {
+    height : 50vh;
+    background-color: springgreen;
+    z-index: 0;
+}
+
+.page4 .p4_box {
+    position: fixed;
+    width : 100%;
+    height : 50vh;
+    bottom : 0;
+    left : 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 .p4_box > ul {
+    width : 60%;
+    height : 70%;
+    background-color: pink;
+}
+
+.page4 .p4_box > ul > li {
+    position: relative;
+    width : 100%;
+    height : calc(100% / 3);
+    border-bottom : 4px solid black;
+    box-sizing: border-box;
+    font-family: bi;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.page4 .p4_box > ul > li::after{
+    content : "";
+    position: absolute;
+    width : 20px;
+    height : 20px;
+    right : 0;
+    top : 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-top : 2px solid black;
+    border-right : 2px solid black;
+    box-sizing: border-box;
+}
+
+.page4 .p4_box > ul > li:hover::after {
+    animation-name: li_e;
+    animation-duration: 1.25s;
+    animation-iteration-count: 1;
+}
+
+@keyframes li_e {
+    0% {
+        transform: translateY(-50%)  translateX(0px) rotate(45deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%)  translateX(8px) rotate(45deg);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(-50%)  translateX(-8px) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(0px) rotate(45deg) ;
+        opacity: 1;
+    }
+}
+/* p4 x */
