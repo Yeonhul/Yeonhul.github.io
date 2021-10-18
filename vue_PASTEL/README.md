@@ -1,4 +1,6 @@
-# vue_pro
+# vue_PASTEL
+
+### src -> img.zip 압축해제 
 
 ## Project setup
 ```
@@ -22,3 +24,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
