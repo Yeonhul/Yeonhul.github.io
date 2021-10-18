@@ -1,0 +1,241 @@
+@include pc {
+    .project {
+        @include size(100%);
+        min-height: 100vh;
+        @include padding($all : 1%, $l : calc(#{$hw_pc} + 200px));
+        @include font($f : ne);
+        .ject_box {
+            @include size(100%);
+            @include padding($all : 3%);
+            background-color: $content_c2;
+            > p {
+                @include size(100%);
+                @include pos(relative);
+                @include font($s : 1.3rem, $w : 700);
+                @include margin($b : 30px);
+                &::after {
+                    content : '';
+                    @include size(80%, 1px);
+                    @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                    background-color: $content_c;
+                }
+            }
+            .project_list {
+                @include flex($fd : column);
+                .project_box {
+                    @include size(100%, 100%);
+                    @include flex();
+                    @include padding($all : 1% 3%);
+                    background-color: $content_c2;
+                    @include tablet {@include margin($b : 30px);}
+                    .pl_box {
+                        @include size(35%, 100%);
+                        @include pos($t :0, $l : 0);
+                        @include tablet {@include size(40%, 100%);}
+                        > p {
+                            @include font($s : 1.5rem, $w : 700, $lh : 2rem);
+                            @include tablet {
+                                @include font($s : 1.2rem, $lh : 1.5rem, $w : 700);
+                                @include margin($t : 15px);
+                            }
+                        }
+                        > em {
+                            @include font($lh : 2rem);
+                            @include tablet{@include font($s : .85rem, $lh : 1.7rem)}
+                        }
+                        .pli {
+                            @include size(100%, 100%);
+                            @include pos(relative);
+                            cursor: pointer;
+                            overflow: hidden;
+                            > img {
+                                @include size(100%);
+                                transition: all .5s;
+                            }
+                            > span {
+                                @include size(100%, 0%);
+                                @include flex($a : center, $j : center);
+                                @include pos(absolute, $b : 0);
+                                @include font($s : 1.2rem, $w : 700, $c : #fff);
+                                opacity: 0;
+                                z-index: 1;
+                                transition: .5s;
+                                background-color: rgba($color: #000000, $alpha: .5);
+                            }
+                            &:hover {
+                                > span {
+                                    @include size(100%, 100%);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .pr_box {
+                        @include size(65%);
+                        @include flex($fd : column, $a : flex-start, $j :center);
+                        @include padding($l : 10%);
+                        @include font($s : 1rem, $lh :2rem);
+                        @include tablet {
+                            @include size(60%);
+                            @include padding($l : 5%);
+                            @include font($s : .85rem, $lh : 2rem);
+                        }
+                        > h1 {
+                            display: inline-block;
+                            @include font($s : 1.2rem, $lh : 1.5rem);
+                            @include bt_color($color : $b2_point); //수정필요
+                            background-size: 100% 50%;
+                            @include tablet {@include font($s : 1rem, $lh : 1.3rem);}
+                        }
+                        > p {
+                            @include margin($b : 10px);
+                        }
+                        > input {
+                            @include border($px : 2px);
+                            @include font($s : 1rem, $f : ne, $lh : 1.3rem, $w : 700);
+                            @include padding($all : 2px 7px);
+                            background: rgba($color: #000000, $alpha: 0);
+                            background-size: 100% 0%;
+                            background-position: bottom;
+                            transition: all .25s;
+                            &:hover {
+                                cursor: pointer;
+                                background: linear-gradient(to bottom, $b2_point 0, $b2_point 100%);
+                                background-size: 100% 50%;
+                                background-position: bottom;
+                                background-repeat: no-repeat;
+                            }
+                            @include tablet2{
+                                @include border($px : 1px);
+                                @include font($s : .9rem, $f : ne, $lh : 1.1rem, $w : 700);
+                                @include padding($all : 2px 4px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .project {
+        @include size(100%);
+        min-height: 100vh;
+        @include padding($all : 0 3%, $t : 35px);
+        @include font($f : ne);
+        .ject_box {
+            @include size(100%);
+            @include padding($all : 3%);
+            background-color: $content_c2;
+            > p {
+                @include size(100%);
+                @include pos(relative);
+                @include font($s : 1rem, $w : 700);
+                @include margin($b : 30px);
+                @include portrait {
+                    @include font($s : 1rem, $w : 700);
+                }
+                &::after {
+                    content : "";
+                    @include size(80%, 1px);
+                    @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                    background-color: $content_c;
+                    @include portrait {
+                        @include size(60%, 1px);
+                    }
+                }
+            }
+            .project_list {
+                @include flex($fd : column);
+                .project_box {
+                    @include size(100%, 100%);
+                    @include flex();
+                    @include padding($all : 1% 3%);
+                    @include margin($b : 30px);
+                    background-color: $content_c2;
+                    @include portrait {
+                        @include flex($fd : column);
+                    }
+                    .pl_box {
+                        @include size(35%, 100%);
+                        @include pos($t : 0, $l : 0);
+                        @include portrait {
+                            @include size(100%, 50%);
+                            @include padding($b : 10px);
+                        }
+                        > p {
+                            @include font($s : 1.5rem, $lh : 2rem, $w : 700);
+                            @include padding($t : 10px);
+                            @include portrait{
+                                @include font($s : 1.2rem, $lh : 1.5rem, $w : 700)
+                            }
+                        }
+                        > em {
+                            @include font($lh : 2rem);
+                            @include portrait {
+                                @include font($s : .9rem, $lh : 1.8rem);
+                            }
+                        }
+                        .pli {
+                            @include size(100%, 100%);
+                            @include pos(relative);
+                            overflow: hidden;
+                            cursor: pointer;
+                            > img {
+                                @include size(100%);
+                            }
+                            > span {
+                                @include size(100%, 0%);
+                                @include pos(absolute, $b : 0);
+                                @include font($s : 1.2rem, $w : 700, $c : #fff);
+                                @include flex($a : center, $j : center);
+                                opacity: 0;
+                                z-index: 1;
+                                transition: all .5s;
+                                background-color: rgba($color: #000000, $alpha: .5);
+                            }
+                            &:hover > span{
+                                @include size(100%, 100%);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .pr_box {
+                        @include size(65%);
+                        @include flex($fd : column, $a : flex-start, $j : center);
+                        @include padding($l : 10%);
+                        @include font($s : 1rem, $lh : 2rem);
+                        @include portrait {
+                            @include size(100%);
+                            @include padding($all : 0);
+                        }
+                        > h1 {
+                            display: inline-block;
+                            @include font($s : 1.2rem, $lh : 1.5rem);
+                            @include bt_color($color : $b2_point);
+                            background-size: 100% 50%;
+                            @include portrait {
+                                @include font($s : 1rem, $lh : 1.3rem);
+                            }
+                        }
+                        > p {
+                            @include margin($b : 10px);
+                            @include portrait {
+                                @include font($s : .8rem);
+                            }
+                        }
+                        > input {
+                            @include border($px : 2px);
+                            @include font($s : .9rem, $f : ne, $lh : 1.1rem, $w : 400);
+                            @include padding($all : 2px 7px);
+                            @include margin($b : 10px);
+                            background: rgba($color: #000000, $alpha: 0);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

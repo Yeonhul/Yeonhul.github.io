@@ -1,0 +1,409 @@
+@media screen and (min-width : 1024px){
+    /* .profile {
+        width : 100%;
+        min-height: 100vh;
+        padding : 1%;
+        padding-left : calc(25% + 200px);
+        box-sizing: border-box;
+        font-family: ne;
+    } 
+    .profile .pro_box {
+        width : 100%;
+        min-height: 96vh;
+        padding : 3%;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.3);
+        
+    }
+    
+    
+    .profile .pro_box .inroduce {
+        position: relative;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .inroduce .file {
+        position: relative;
+        width : 100%;
+        margin-bottom : 10px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .profile .pro_box .inroduce .file::after {
+        content : '';
+        position: absolute;
+        width : 85%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .profile .pro_box .inroduce .pro {
+        margin-bottom : 20px;
+    }
+    
+    .profile .pro_box .skils {
+        position: relative;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .skils > em {
+        position: relative;
+        width: 100%;
+        display : block;
+        font-size: 1rem;
+        font-weight: 700;
+        z-index: 1;
+    }
+    
+    .profile .pro_box .skils > em::after {
+        content : '';
+        position: absolute;
+        width : 90%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .profile .pro_box .skils .skil_g {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top : 20px;
+        font-family: ne;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color : rgb(26, 25, 25);
+        gap : 30px;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box {
+        background-color: #EDEAE5;
+        padding : 0.5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box .sk_img {
+        width : 80px;
+        height : 80px;
+        overflow: hidden;
+    }
+    .profile .pro_box .skils .skil_g  .sk_box .sk_img > img {
+        width : 100%;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box > p {
+        margin-top : 10px;
+    }
+    
+    .profile .pro_box .storage {
+        position: relative;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .storage > em {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 100%;
+        display : block;
+        z-index: 1;
+    }
+    
+    .profile .pro_box .storage > em::after {
+        content : '';
+        position: absolute;
+        width : 85%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .profile .pro_box .storage .st_g {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top : 20px;
+        font-family: ne;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color : rgb(26, 25, 25);
+        gap : 30px;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box {
+        background-color: #EDEAE5;
+        padding : 0.5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box .st_img {
+        width : 80px;
+        height : 80px;
+        overflow: hidden;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box .st_img > img {
+        width : 100%;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box > p {
+        margin-top : 10px;
+    }*/
+}
+
+@media screen and (max-width : 1023px) {
+    /* .profile {
+        width : 100%;
+        min-height: 100vh;
+        padding : 0 3%;
+        padding-top : 35px;
+        box-sizing: border-box;
+        font-family: ne;
+    }
+
+    .profile .pro_box {
+        width : 100%;
+        min-height: 96vh;
+        padding : 3%;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.3);
+        
+    }
+    
+    .profile .pro_box .inroduce {
+        position: relative;
+        font-size: .9rem;
+        line-height: 1.8rem;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .inroduce .file {
+        position: relative;
+        width : 100%;
+        margin-bottom : 10px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .profile .pro_box .inroduce .file::after {
+        content : '';
+        position: absolute;
+        width : 70%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    } 
+    .profile .pro_box .inroduce .pro {
+        margin-bottom : 20px;
+    }
+    
+    .profile .pro_box .skils {
+        position: relative;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .skils > em {
+        position: relative;
+        width: 100%;
+        display : block;
+        font-size: 1rem;
+        font-weight: 700;
+        z-index: 1;
+    }
+    
+    .profile .pro_box .skils > em::after {
+        content : '';
+        position: absolute;
+        width : 70%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .profile .pro_box .skils .skil_g {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top : 20px;
+        font-family: ne;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color : rgb(26, 25, 25);
+        gap : 10px;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box {
+        background-color: #EDEAE5;
+        padding : 0.5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box .sk_img {
+        width : 80px;
+        height : 80px;
+        overflow: hidden;
+    }
+    .profile .pro_box .skils .skil_g  .sk_box .sk_img > img {
+        width : 100%;
+    }
+    
+    .profile .pro_box .skils .skil_g  .sk_box > p {
+        margin-top : 10px;
+        font-size: 0.7rem;
+    
+    
+    
+    .profile .pro_box .storage {
+        position: relative;
+        margin-bottom : 30px;
+    }
+    
+    .profile .pro_box .storage > em {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 100%;
+        display : block;
+        z-index: 1;
+    }
+    
+    .profile .pro_box .storage > em::after {
+        content : '';
+        position: absolute;
+        width : 70%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .profile .pro_box .storage .st_g {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top : 20px;
+        font-family: ne;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color : rgb(26, 25, 25);
+        gap : 30px;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box {
+        background-color: #EDEAE5;
+        padding : 0.5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box .st_img {
+        width : 80px;
+        height : 80px;
+        overflow: hidden;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box .st_img > img {
+        width : 100%;
+    }
+    
+    .profile .pro_box .storage .st_g .st_box > p {
+        margin-top : 10px;
+    }
+
+    .info2 .info2_h {
+        position: relative;
+        width : 100%;
+        margin-bottom : 15px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .info2 .info2_h::after {
+        content : '';
+        position: absolute;
+        width : 70%;
+        height : 1px;
+        top : 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        right : 0;
+        z-index: 0;
+        transform: translateY(-50%);
+    }
+    
+    .info2 .info {
+        width: 100%;
+        height : 100%;
+        font-family: ne;
+        align-self: center;
+        justify-self: center;
+        transition: all 0.5;
+        padding : 2%;
+        box-sizing: border-box;
+        margin : 15px 0;
+    }
+    
+    .info2 .info > p {
+        position: relative;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    
+    .info2 .info > p::before {
+        position: absolute;
+        content : '';
+        width : 5px;
+        height : 5px;
+        background-color: black;
+        border-radius: 100%;
+        top : 50%;
+        transform: translate(-200%, -50%);
+    }
+    
+    .info2 .info > p:nth-child(5):before {
+        top : 20%;
+        transform: translateX(-200%);
+    }
+    
+    .info2 .info .mail {
+        margin-top : 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info2 .info .mail > a {
+        line-height: 2.5rem;
+    }
+    .info2 .info .mail > a > em {
+        color : black;
+        font-size: 1.1rem;
+    }
+    .info2 .info .mail > p {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+    
+    .info2 .info .mail > p:last-child {
+        margin-top : 40px;
+    }*/
+    
+}
