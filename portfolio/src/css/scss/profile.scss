@@ -1,0 +1,285 @@
+@include pc {
+    .profile {
+        @include size(100%, 100vh);
+        min-height: 100vh;
+        @include padding($all : 1%, $l : calc(#{$hw_pc} + 200px));
+        @include font($f : ne);
+        .pro_box {
+            @include size(100%);
+            min-height: 96vh;
+            @include padding($all : 3%);
+            background-color: $content_c2;
+
+            .inroduce {
+                @include pos(relative);
+                @include font($s : 1.1rem, $lh : 1.6rem);
+                @include margin($b : 30px);
+                > p {
+                    .file {
+                        @include size(100%);
+                        @include pos(relative);
+                        @include font($s : 1rem, $w : 700);
+                        @include margin($b : 10px);
+                        &::after {
+                            content : '';
+                            @include size(85%, 1px);
+                            @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                            background-color: $content_c;
+                        }
+                    }
+                    .pro {
+                        @include margin($b : 20px);
+                    }
+                }
+            }
+
+            .skils {
+                @include pos(relative);
+                @include margin($b : 30px);
+                > em {
+                    @include size(100%);
+                    @include pos(relative);
+                    @include font($s : 1rem, $w : 700);
+                    display : block;
+                    z-index: 1;
+                    &::after {
+                        content :'';
+                        @include size(90%, 1px);
+                        @include pos(absolute, $t : 50%, $r : 0,$trY : -50%);
+                        background-color: $content_c;
+                        z-index: 0;
+                    }
+                }
+                .skil_g {
+                    @include flex($gx : 30px, $gy : 30px);
+                    @include font($s : .8rem, $f : ne, $w : 700, $c :#1a1919);
+                    @include margin($t : 20px);
+                    .sk_box {
+                        @include padding($all : .5%);
+                        text-align: center;
+                        background-color: #EDEAE5;
+                        > p {
+                            @include margin($t : 10px);
+                        }
+                        .sk_img {
+                            @include size(80px, 80px);
+                            overflow: hidden;
+                            > img {
+                                @include size(100%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .storage {
+                @include pos(relative);
+                @include margin($b : 30px);
+                > em {
+                    @include size(100%);
+                    @include pos(relative);
+                    @include font($s : 1rem, $w : 700);
+                    display : block;
+                    &::after {
+                        content : '';
+                        @include size(85%, 1px);
+                        @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                        background-color: $content_c;
+                    }
+                }
+                .st_g {
+                    @include flex($gx : 30px, $gy : 30px);
+                    @include font($s : .8rem, $f : ne, $w : 700, $c : #1a1919);
+                    @include margin($t : 20px);
+
+                    .st_box {
+                        @include padding($all : .5%);
+                        text-align: center;
+                        background-color: #edeae5;
+                        > p {
+                            @include margin($t : 10px);
+                        }
+                        .st_img {
+                            @include size(80px, 80px);
+                            overflow: hidden;
+                            > img {
+                                @include size(100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .profile {
+        @include size(100%);
+        min-height: 100vh;
+        @include font($f : ne);
+        @include padding($all : 0 3%, $t : 35px);
+        .pro_box {
+            @include size(100%);
+            min-height: 96vh;
+            @include padding($all : 3%);
+            background-color: $content_c2;
+            .info2 {
+                .info2_h {
+                    @include size(100%);
+                    @include pos(relative);
+                    @include font($s : 1rem, $w : 700);
+                    @include margin($b : 15px);
+                    &::after {
+                        content : '';
+                        @include size(70%, 1px);
+                        @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                        background-color: $content_c;
+                        z-index: 0;
+                    }
+                }
+                .info {
+                    @include size(100%, 100%);
+                    @include font($f : ne);
+                    @include padding($all : 2%);
+                    @include margin($all : 15px 0);
+                    transition: all .5s;
+                    align-self: center;
+                    justify-self: center;
+                    > p {
+                        @include pos(relative);
+                        @include font($s : .9rem, $lh : 1.5rem);
+                        &::before {
+                            content : '';
+                            @include size(5px, 5px);
+                            @include pos(absolute, $t : 50%, $trX : -200%, $trY : -50%);
+                            @include border($rad : 100%);
+                            background-color: black;
+
+                        }
+                        &:nth-child(5)::before {
+                            @include pos($t : 20%, $trX : -200%);
+                        }
+                    }
+                    .mail {
+                        @include flex($a : flex-start, $fd : column);
+                        @include margin($t : 15px);
+                        > a {
+                            @include font($lh : 2.5rem);
+                            text-decoration: none;
+                            > em {
+                                @include font($s : 1.1rem, $c : #000);
+                            }
+                        }
+                        > p {
+                            @include font($s : .9rem, $lh : 1.3rem);
+                            &:last-child {
+                                @include margin($t : 40px);
+                            }
+                        }
+                    }
+                }
+            }
+            .inroduce {
+                @include pos(relative);
+                @include font($s : .9rem, $lh : 1.8rem);
+                @include margin($b : 30px);
+                > p {
+                    .file {
+                        @include size(100%);
+                        @include pos(relative);
+                        @include font($s : 1rem, $w : 700);
+                        @include margin($b : 10px);
+                        &::after {
+                            content : '';
+                            @include size(70%, 1px);
+                            @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                            background-color: $content_c;
+                        }
+                    }
+                    .pro {
+                        @include margin($b : 20px);
+                    }
+                }
+                
+            }
+            .skils {
+                @include pos(relative);
+                @include margin($b : 30px);
+                > em {
+                    @include size(100%);
+                    @include pos(relative);
+                    @include font($s : 1rem, $w : 700);
+                    display: block;
+                    z-index: 1;
+                    &::after {
+                        content : '';
+                        @include size(70%, 1px);
+                        @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                        background-color: $content_c;
+                    }
+                }
+                .skil_g {
+                    @include flex($gx : 10px, $gy : 10px);
+                    @include font($s : .8rem, $f : ne, $w : 700, $c : #1a1919);
+                    @include margin($t : 20px);
+                    .sk_box {
+                        @include padding($all : .5%);
+                        background-color: #EDEAE5;
+                        text-align: center;
+                        > p {
+                            @include font($s : .7rem);
+                            @include margin($t : 10px);
+                        }
+                        .sk_img {
+                            @include size(80px, 80px);
+                            overflow: hidden;
+                            > img {
+                                @include size(100%);
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .storage {
+                @include pos(relative);
+                @include margin($b : 30px);
+                > em {
+                    @include size(100%);
+                    @include pos(relative);
+                    @include font($s : 1rem, $w : 700);
+                    display: block;
+                    z-index: 1;
+                    &::after {
+                        content : '';
+                        @include size(70%, 1px);
+                        @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                        background-color: $content_c;
+                    }
+                }
+                .st_g {
+                    @include flex($gx : 30px, $gy : 30px);
+                    @include font($s : .8rem, $w : 700, $f : ne, $c : #1a1919);
+                    @include margin($t : 20px);
+                    .st_box {
+                        @include padding($all : .5%);
+                        background-color: #EDEAE5;
+                        text-align: center;
+                        > p {
+                            @include margin($t : 10px);
+                        }
+                        .st_img {
+                            @include size(80px, 80px);
+                            overflow: hidden;
+                            > img {
+                                @include size(100%);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

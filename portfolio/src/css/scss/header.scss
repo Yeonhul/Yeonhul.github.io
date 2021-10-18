@@ -1,0 +1,185 @@
+
+@include pc {
+    .header {
+        @include size($hw_pc, 100vh);
+        @include pos(fixed);
+        @include padding($l : 60px);
+        .pro {
+            @include size(100%);
+            @include pos(relative, $t : 50%, $trY : -50%);
+            @include flex($a : center, $gx : 30px, $gy : 0);
+            @include padding($all : 15px);
+            background-color: rgba($color: #fff, $alpha: .5);
+            .plbox {
+                .pro_img {
+                    @include size(90px, 90px);
+                    @include pos(relative);
+                    @include border($rad : 100%);
+                    overflow: hidden;
+                    > img {
+                        @include size(100%);
+                        @include pos(absolute);
+                    }
+                }
+                .pro_txt {
+                    @include font($w : 700, $f : na);
+                    @include tablet {
+                        @include font($f : na, $w : 700);
+                    }
+                    > h1 {
+                        @include font($s : 2rem, $lh : 3rem);
+                        @include tablet {
+                            @include font($s : 1.5rem, $lh : 2rem, );
+                            @include margin($t : 10px);
+                        }
+                    }
+                    > p {
+                        @include font($s : 1.3rem);
+                        @include tablet {
+                            @include font($s : 1rem);
+                        }
+                    }
+                }
+            }
+            .info {
+                @include size(100%, 100%);
+                @include margin($t : 50px);
+                @include font($f : ne);
+                > p {
+                    @include pos(relative);
+                    @include font($s : .9rem, $lh : 1.5rem);
+                    &::before {
+                        content : '';
+                        @include size(5px, 5px);
+                        @include pos(absolute, $t : 50%, $trX : -150%, $trY : -50%);
+                        @include border($rad : 100%);
+                        background-color: #000;
+                    }
+                    &:nth-child(5)::before {
+                        @include pos($t : 20%, $trX : -150%);
+                    }
+                }
+                .mail {
+                    @include flex($fd : column, $a : flex-start);
+                    > a {
+                        @include font($lh : 2.5rem);
+                        text-decoration: none;
+                        > em {
+                            @include font($lh : 1.1rem, $c : #000);
+                        }
+                    }
+                    > p {
+                        @include font($s : .9rem, $lh : 1.3rem);
+                        &:last-child {
+                            @include margin($t : 40px);
+                        }
+                    }
+                }
+            }
+        }
+        .h_pbox {
+            @include size(100px);
+            @include pos(absolute, $t : 50%, $r : 0, $trX : 100%, $trY : -50%);
+            @include flex($fd : column, $a : center, $gx : 0, $gy : 50px);
+            > input {
+                @include size(80px, 30px);
+                @include pos(relative);
+                @include border();
+                @include font($s : 1.2rem, $f : ne, $w : 700);
+                background-color: rgba($color: #000000, $alpha: 0);
+                transition: all .5s;
+                cursor: pointer;
+                &:nth-child(1).h_E {
+                    @include bt_color($b1_point)
+                }
+                &:nth-child(2).h_E {
+                    @include bt_color($b2_point)
+                }
+                &:nth-child(3).h_E {
+                    @include bt_color($b3_point)
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        @include size(100%, $hh_m);
+        @include pos(relative, $t : 0);
+        @include font($f : ne);
+        transition: all .5s;
+        z-index: 100;
+        .pro {
+            @include size(100%);
+            @include pos(relative);
+            @include flex($fd : column, $a : flex-start, $gx : 10px, $gy : 0);
+            @include padding($all : 10px);
+            background-color: rgba($color: #000000, $alpha: 0);
+            .plbox {
+                @include size(100%);
+                @include flex($a : center, $j : space-evenly);
+                .pro_img {
+                    @include size(60px, 60px);
+                    @include pos(relative);
+                    @include border($rad : 100%);
+                    overflow: hidden;
+                    @include fold {
+                        @include size(50px, 50px);                        
+                        @include pos(relative);
+                    }
+                    > img {
+                        @include size(100%);
+                        @include pos(absolute, $t : 50%, $l : 50%, $trX : -50%, $trY : -50%);
+                    }
+                }
+                .pro_txt {
+                    @include font($f : na, $w : 700);
+                    @include fold {
+                        @include font($f : na, $w : 700);
+                    }
+                    > h1 {
+                        @include font($s : 1.4rem, $lh : 2rem);
+                        // @include fold {
+                        //     @include font($s : 1rem, $lh : 2rem);
+                        // }
+                    }
+                    > p {
+                        @include fold {
+                            @include font($s : .8rem);
+                        }
+                    }
+                }
+            }
+        }
+        .h_pbox {
+            @include size(100%);
+            @include pos(absolute);
+            @include flex($a : center, $j : center, $gx : 10px, $gy : 0);
+            transition: all .25s;
+            &.hp_E2 {
+                @include pos(fixed, $t : 0);
+                transition: all 0s;
+                background-color: $content_c2;
+            }
+            > input {
+                @include size(80px, 25px);
+                @include pos(relative);
+                @include font($s : .9rem, $f : ne, $w : 700);
+                @include border();
+                cursor: pointer;
+                background-color: rgba($color: #000000, $alpha: 0);
+                transition: all .5s;
+                &:nth-child(1).h_E {
+                    @include bt_color($b1_point)
+                }
+                &:nth-child(2).h_E {
+                    @include bt_color($b2_point)
+                }
+                &:nth-child(3).h_E {
+                    @include bt_color($b3_point)
+                }
+            }
+        }
+    }
+}
