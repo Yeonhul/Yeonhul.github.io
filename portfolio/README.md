@@ -1,8 +1,5 @@
 # portfolio
 
-### 포트폴리오 
-```
-
 ## Project setup
 ```
 npm install
