@@ -1,0 +1,288 @@
+$pc_width : 1024px; //pc width size
+$hw_pc : 25%; // pc header width
+$hh_m : 80px; // mobile header height
+$content_c : rgba($color: #000000, $alpha: .3);
+$content_c2 : rgba($color: #fff, $alpha: .3);
+
+@mixin bt_color($color : null) {
+    background: linear-gradient(to top, rgba(0,0,0,0) 10%, $color 10%);
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+// $b1_point : #CD69A7;
+$b1_point : #d1c6f3;
+// $b2_point : #FFFFB5;
+$b2_point : #fb8883;
+// $b3_point : #A3B5FD;
+$b3_point : #bfffc7;
+
+// @media start
+@mixin mobile {
+    @media screen and (max-width : $pc_width - 1px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width : 1300px){
+        @content;
+    }
+}
+
+@mixin tablet2 {
+    @media screen and (max-width : 1400px){
+        @content;
+    }
+}
+
+// @mixin landscape {
+//     @media screen and (max-height : 500px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+
+@mixin portrait {
+    @media screen and (max-width : 1023px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width : $pc_width){
+        @content;
+    }
+}
+
+@mixin fold {
+    @media screen and (max-width : 280px) {
+        @content;
+    }
+}
+// @media end
+
+
+// mixin start
+@mixin size(
+    $w : null,
+    $h : null,
+) {
+    width : $w;
+    height : $h;
+};
+
+@mixin flex(
+    $d : flex,
+    $a : null,
+    $j : null,
+    $fd : null,
+    $gx : null,
+    $gy : null
+) {
+    display : $d;
+    align-items: $a;
+    justify-content: $j;
+    flex-direction: $fd;
+    flex-wrap : wrap;
+    gap : $gy $gx;
+}
+
+@mixin padding(
+    $t : null,
+    $b : null,
+    $l : null,
+    $r : null,
+    $all : null
+){
+    padding : $all;
+    padding : {
+        top : $t;
+        bottom : $b;
+        left : $l;
+        right : $r;
+    }
+    box-sizing: border-box;
+}
+
+@mixin pos(
+    $p : null,
+    $t : null,
+    $b : null,
+    $l : null,
+    $r : null,
+    $trX : 0,
+    $trY : 0,
+    $tr : null,
+) {
+    position: $p;
+    top : $t;
+    bottom : $b;
+    left : $l;
+    right : $r;
+    @if ($trX != 0 or $trY != 0) {
+        transform: translate($trX, $trY) $tr;
+    }
+}
+
+@mixin margin(
+    $t : null,
+    $b : null,
+    $l : null,
+    $r : null,
+    $all : null
+){
+    margin : $all;
+    margin : {
+        top : $t;
+        bottom : $b;
+        left : $l;
+        right : $r;
+    }
+}
+
+@mixin border(
+    $px : 0,
+    $color : black,
+    $t : 0,
+    $b : 0,
+    $r : 0,
+    $l : 0,
+    $rad : null,
+) {
+    @if ($px > 0) {
+        border : $px solid $color;
+    }@else{
+        border : 0;
+    }
+
+    @if($t > 0){border-top : $t solid $color;}
+    @if($b > 0){border-bottom : $b solid $color;}
+    @if($l > 0){border-left : $l solid $color;}
+    @if($r > 0){border-right : $r solid $color;}
+    border-radius: $rad;
+    @if($px > 0 or $t > 0 or $b > 0 or $l > 0 or $r > 0) {
+        box-sizing: border-box;
+    }
+}
+
+@mixin font(
+    $s : null,
+    $f : null,
+    $lh : null,
+    $w : null,
+    $c : null,
+    $ca : 1.0,
+) {
+    font : {
+        size : $s;
+        family : $f;
+        weight : $w;
+    }
+    line-height: $lh;
+    @if($c != null) {
+        color : rgba($color: $c, $alpha: $ca);
+    }
+}
+// mixin end
+
+
+//Reset scss code 
+html, body, div, span, applet, object, iframe, h1, 
+h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, 
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, embed, figure, figcaption, footer, header, hgroup, menu, 
+nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+}
+  
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; 
+}
+
+body {
+    line-height: 1; 
+}
+
+ol, ul {
+    list-style: none; 
+}
+
+blockquote, q {
+    quotes: none; 
+}
+
+blockquote {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    } 
+}
+
+q {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    } 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+// font reset 
+@font-face {
+    font-family: bi;
+    src: url(fonts/TitilliumWeb-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: na;
+    src: url(fonts/NanumBarunGothic.woff) format('woff');
+} 
+
+@font-face {
+    font-family: ne;
+    src: url(fonts/NEXONLv2Gothic.woff) format('woff');
+}
+
+// 스크롤바 조정 
+html {
+    body {
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border-radius: 25px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+    }
+}
+// 스크롤바 조정 종료
+
+// app.vue scss 
+.app_div {
+    @include size(100%);
+    &.app_back0 {
+        background: linear-gradient(to right bottom, $b1_point, #e9bcac 100%);
+    }
+    &.app_back1 {
+        background: linear-gradient(to right bottom,  #EEF4d2, $b2_point 100%);
+    }
+    &.app_back2 {
+        background: linear-gradient(to left top, #849b5c, $b3_point 100%);
+    }
+}
