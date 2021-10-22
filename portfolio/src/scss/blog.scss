@@ -1,0 +1,160 @@
+@include pc {
+    .blog {
+        @include size(100%);
+        min-height: 100vh;
+        @include padding($all : 1%, $l : calc(#{$hw_pc} + 200px));
+        @include font($f : ne);
+        
+        .blog_box {
+            @include size(100%);
+            @include padding($all : 3%);
+            background-color: $content_c2;
+            > em {
+                @include size(100%);
+                @include pos(relative);
+                @include font($s : 1rem, $w : 700);
+                @include margin($b : 20px);
+                display: block;
+                z-index: 1;
+                &::after {
+                    content : '';
+                    @include size(80%, 1px);
+                    @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                    background-color: $content_c;
+                }
+            }
+            > select {
+                @include font($f : bi);
+                @include padding($all : 3px);
+                @include margin($b : 15px);
+                outline: none;
+                background-color: rgba($color: #000000, $alpha: 0);
+                
+            }
+            .posting_list {
+                @include flex($gx : 15px, $gy : 15px);
+                @include padding($all : 0 3%);
+                .post_box {
+                    @include size(230px, 230px);
+                    @include pos(relative);
+                    @include font($s : 1.2rem, $f : bi);
+                    cursor: pointer;
+                    @include tablet2 {
+                        @include size(210px, 210px);
+                    }
+                    
+                    overflow: hidden;
+                    > img {
+                        @include pos(absolute);
+                        filter: brightness(50%);
+                        -webkit-user-drag: none;
+                    }
+                    > p {
+                        @include pos(absolute, $t : 0);
+                        @include padding($all : 5px);
+                    }
+                    
+                    .post_t {
+                        @include pos(absolute, $b : 0, $r : 0);
+                        @include font($s : .9rem, $f : ne, $lh : 1.3rem, $w : 700, $c : #fff);
+                        @include padding($all : 5px);
+                        text-align: right;
+                        opacity: 0.7;
+
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .blog {
+        @include size(100%);
+        min-height: 100vh;
+        @include padding($all : 3%, $t : 35px);
+        @include font($f : ne);
+        .blog_box {
+            @include size(100%, 100%);
+            @include padding($all : 3%);
+            @include margin($b : 30px);
+            @include font($lh : 1.5rem);
+            background-color: $content_c2;
+            > em {
+                @include size(100%);
+                @include pos(relative);
+                @include font($s : 1rem, $w : 700);
+                @include margin($b : 10px);
+                display: block;
+                z-index: 1;
+                &::after {
+                    content : '';
+                    @include size(70%, 1px);
+                    @include pos(absolute, $t : 50%, $r : 0, $trY : -50%);
+                    background-color: $content_c;
+                }
+            }
+            > select {
+                @include font($f : bi);
+                @include padding($all : 3px);
+                @include margin($b : 15px);
+                outline: none;
+                background-color: rgba($color: #000000, $alpha: 0);
+                
+            }
+            .posting_list {
+                @include flex($gx : 10px, $gy : 10px);
+                @include padding($all : 0 2%);
+                .post_box {
+                    @include size($h : 200px);
+                    width : 100%;
+                    @include pos(relative);
+                    @include font($s : 1.2rem, $f : bi);
+                    overflow: hidden;
+                    cursor: pointer;
+                    > img {
+                        @include pos(absolute);
+                        min-width: 100%;
+                        filter: brightness(50%);
+                        -webkit-user-drag: none;
+                    }
+                    > p {
+                        @include pos(absolute, $t : 0);
+                        @include padding($all : 5px);
+                    }
+                    
+                    .post_t {
+                        @include pos(absolute, $b : 0, $r : 0);
+                        @include font($s : .9rem, $f : ne, $lh : 1.3rem, $w : 700, $c : #fff);
+                        @include padding($all : 5px);
+                        text-align: right;
+                        opacity: 0.7;
+
+                    }
+                    &:last-child {
+                        @include margin($b : 10px);
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}
+
+.html {
+    @include font($c : #FF8357);
+}
+.css {
+    @include font($c : #A3B5FD);
+}
+.javascript {
+    @include font($c : #FDD84C);
+}
+.scss {
+    @include font($c : #F583B4);
+}
+.vue {
+    @include font($c : #60EFDB);
+}
